@@ -1,7 +1,5 @@
 #Asignación =
 
-from nntplib import NNTPDataError
-
 
 x = 5
 print ('El valor de la variable x es: ', x)
