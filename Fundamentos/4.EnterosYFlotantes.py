@@ -52,4 +52,8 @@ print('Division entera', 10//3)
 print('Raiz con potencia: ', 64**(1/2))
 print('Raiz: ', int(math.sqrt(64)))
 
-#
+#----------------------------------
+#Float -> float
+#-----------------------------------
+numeroFlotante = float(input('Ingresa un numero decimal: '))
+print('Numero: ',numeroFlotante)
