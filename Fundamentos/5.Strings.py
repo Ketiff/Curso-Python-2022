@@ -93,3 +93,40 @@ print(letra)
 letra = 'A'
 print(letra)
 
+#Indexacion con RANGOS
+print('-----INDEXACION CON RANGOS-----')
+#RANGO: [valorIncluido:valorExcluido:Saltos]
+print(cadenaTexto[0:2]) #Desde la posicion 0 hasta la posicion 1
+print(cadenaTexto[0:10])
+print(cadenaTexto[2:20])
+print(cadenaTexto[2:20:2])#Realiza saltos de 2 en 2
+# Indice hasta el final
+print(cadenaTexto[2:]) #Desde el indice hasta el final
+print(cadenaTexto[:3]) #Desde el comienzo hasta el indice
+
+print(cadenaTexto[:]) #Misma salida
+print(cadenaTexto[::]) #Misma salida (accedo a todo el contenido con saltos de 1)(Inicio a Fin)
+
+#Ejericio: Invierta toda la variable cadenaTexto
+print('Cadena Original: ', cadenaTexto)
+print('Cadena Final: ', cadenaTexto[::-1]) #Misma salida (accedo a todo el contenido con saltos de -1) (Fin a Inicio)
+ 
+ #Funciones en Python
+
+print(cadenaTexto.upper()) #Se abre y cierra parentesis pq es un metodo (Todo mayusculas)
+print(cadenaTexto.lower()) #Todo minusculas
+print(cadenaTexto.capitalize()) #Primera mayuscula
+
+#Encontrar algo en tu cadena de texto
+print(cadenaTexto.find('curso')) #Si encuentra, devuelve el indice
+print('Animales: tigre'.find('tigre')) #Si encuentra, devuelve el indice
+#Si el substring no exist - me devuelve -1
+print('Animales: tigre'.find('perro')) #Me devuelve el indice -1
+
+cadenaTexto2 = 'Los niños juegan en el parque'
+#Validar si empieza con...
+print(cadenaTexto2.startswith('Los')) #El string que pasamos empieza con 'Los'? True
+print(cadenaTexto2.startswith('Las')) #False
+#Validar si termina con
+print(cadenaTexto2.endswith('parque')) #El string que pasamos termina con 'parque'? True
+print(cadenaTexto2.endswith('juegan')) #El string que pasamos termina con 'juegan'? False
