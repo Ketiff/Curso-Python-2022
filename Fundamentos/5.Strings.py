@@ -130,3 +130,6 @@ print(cadenaTexto2.startswith('Las')) #False
 #Validar si termina con
 print(cadenaTexto2.endswith('parque')) #El string que pasamos termina con 'parque'? True
 print(cadenaTexto2.endswith('juegan')) #El string que pasamos termina con 'juegan'? False
+
+#Funcion replace
+print(cadenaTexto2.replace('juegan','se diviertien'))
