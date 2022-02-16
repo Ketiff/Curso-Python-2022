@@ -1,4 +1,5 @@
-#-------BOLEANOS-------
+#-------BOLEANOS------- 
+#bool()
 # ---Parte 1: Bolean
 # Dos tipos (True/False)
 #True = 1 / False = 0
