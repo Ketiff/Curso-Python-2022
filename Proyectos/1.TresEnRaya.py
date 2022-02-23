@@ -104,15 +104,56 @@ def jugar(tablero,dimensiones):
     finalizado = False
     turno = randint(1,2)
     while finalizado == False:
+        piezaActual = ''
+        jugadorActual = ''
         if turno == 1:
             print('Es turno de: ', nombreJ1)
+            piezaActual = piezaJ1
+            jugadorActual = nombreJ1
             llenarMatriz(tablero, piezaJ1)
             turno = 2        
         else:
             print('Es turno de: ', nombreJ2)
+            piezaActual = piezaJ2
+            jugadorActual = nombreJ2
             llenarMatriz(tablero, piezaJ2)
             turno = 1    
+        #Validar cuando se hizo en raya
+
+        #Casos HORIZONTALES
+
+        if tablero[0][0] == piezaActual and tablero[0][1] == piezaActual and tablero[0][2] == piezaActual:
+            finalizado = True
+
+        if tablero[1][0] == piezaActual and tablero[1][1] == piezaActual and tablero[1][2] == piezaActual:
+            finalizado = True
+        
+        if tablero[2][0] == piezaActual and tablero[2][1] == piezaActual and tablero[2][2] == piezaActual:
+            finalizado = True
+        
+        #Casos VERTICALES  
+          
+        if tablero[0][0] == piezaActual and tablero[1][0] == piezaActual and tablero[2][0] == piezaActual:
+            finalizado = True
+        if tablero[0][1] == piezaActual and tablero[1][1] == piezaActual and tablero[2][1] == piezaActual:
+            finalizado = True            
+        if tablero[0][2] == piezaActual and tablero[1][2] == piezaActual and tablero[2][2] == piezaActual:
+            finalizado = True      
+        
+        #Casos Diagonales
+        if tablero[0][0] == piezaActual and tablero[1][1] == piezaActual and tablero[2][2] == piezaActual:
+            finalizado = True  
+        if tablero[2][0] == piezaActual and tablero[1][1] == piezaActual and tablero[0][2] == piezaActual:
+            finalizado = True      
+        
+        #En caso de que se haya llenado el tablero
+        #Validar cuando se sobreescribe una posicion ocupada
+        #Validar cuando todos los espacios estan llenos
+
         mostrarMatriz(tablero,dimensiones)
+        
+    print('****SE ACABO EL JUEGO****')
+    print('\tEl jugador ganador es: ', jugadorActual)
 
 def mostrarTablero():
     pass
